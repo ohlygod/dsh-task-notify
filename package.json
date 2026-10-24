@@ -1,0 +1,48 @@
+{
+  "name": "dsh-task-notify",
+  "version": "0.1.0",
+  "description": "每次 DSH 的一轮任务跑完就在 Windows 上弹一条系统通知（托盘气泡），支持开关与合并防刷屏。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohlygod/dsh-task-notify.git"
+  },
+  "homepage": "https://github.com/ohlygod/dsh-task-notify#readme",
+  "bugs": {
+    "url": "https://github.com/ohlygod/dsh-task-notify/issues"
+  },
+  "keywords": [
+    "dshapp-plugin",
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "notification",
+    "windows"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "slots"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT",
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}

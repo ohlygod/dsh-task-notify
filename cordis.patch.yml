@@ -1,0 +1,6 @@
+# dsh-task-notify —— bundle 补丁。
+#
+# 只 insert 自己一行、不碰任何既有行。
+- insert:
+    - id: task-notify
+      name: 'dsh-task-notify'
